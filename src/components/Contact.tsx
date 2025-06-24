@@ -3,8 +3,10 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Contact() {
+  const { t } = useLanguage()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -17,7 +19,7 @@ export default function Contact() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          Contact Me
+          {t('contact.title')}
         </motion.h2>
         <motion.div 
           className="max-w-2xl mx-auto text-center"
@@ -31,7 +33,7 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            お気軽にご連絡ください
+            {t('contact.subtitle')}
           </motion.h3>
           <motion.p 
             className="text-gray-300 mb-12 leading-relaxed"
@@ -39,8 +41,7 @@ export default function Contact() {
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.6, delay: 0.6 }}
           >
-            フリーランスとして新しいプロジェクトや協業の機会を探しています。
-            あなたのビジョンを実現するお手伝いをさせてください。
+            {t('contact.description')}
           </motion.p>
           
           <motion.div 
@@ -76,7 +77,7 @@ export default function Contact() {
               </motion.div>
               <div>
                 <h4 className="font-semibold group-hover:text-blue-300 transition-colors">LinkedIn</h4>
-                <p className="text-gray-300 group-hover:text-gray-200 transition-colors text-sm">プロフェッショナルな経歴と実績</p>
+                <p className="text-gray-300 group-hover:text-gray-200 transition-colors text-sm">{t('contact.linkedin.desc')}</p>
               </div>
             </motion.a>
             
@@ -96,8 +97,8 @@ export default function Contact() {
                 </svg>
               </motion.div>
               <div>
-                <h4 className="font-semibold">Location</h4>
-                <p className="text-gray-300 text-sm">Tokyo, Japan</p>
+                <h4 className="font-semibold">{t('contact.location.title')}</h4>
+                <p className="text-gray-300 text-sm">{t('contact.location.desc')}</p>
               </div>
             </motion.div>
           </motion.div>
@@ -123,8 +124,8 @@ export default function Contact() {
                 </svg>
               </motion.div>
               <div>
-                <h4 className="font-semibold">Availability</h4>
-                <p className="text-gray-300 text-sm">新しいプロジェクトを受付中</p>
+                <h4 className="font-semibold">{t('contact.availability.title')}</h4>
+                <p className="text-gray-300 text-sm">{t('contact.availability.desc')}</p>
               </div>
             </motion.div>
             
@@ -143,8 +144,8 @@ export default function Contact() {
                 </svg>
               </motion.div>
               <div>
-                <h4 className="font-semibold">Certifications</h4>
-                <p className="text-gray-300 text-sm">Japanese (Native), AWS認定SA</p>
+                <h4 className="font-semibold">{t('contact.certifications.title')}</h4>
+                <p className="text-gray-300 text-sm">{t('contact.certifications.desc')}</p>
               </div>
             </motion.div>
           </motion.div>

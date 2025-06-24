@@ -3,8 +3,10 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import ParticleBackground from './ParticleBackground'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Hero() {
+  const { t } = useLanguage()
   return (
     <section className="relative min-h-screen flex items-center justify-center text-white overflow-hidden">
       <div className="absolute inset-0">
@@ -33,7 +35,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.3, type: "spring", stiffness: 100 }}
         >
           <Image
-            src="/profile.jpg"
+            src="/rats.png"
             alt="Kazuki Nakamura"
             width={200}
             height={200}
@@ -48,7 +50,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          Kazuki Nakamura
+          {t('hero.title')}
         </motion.h1>
         
         <motion.p 
@@ -57,7 +59,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          Freelance Software Engineer
+          {t('hero.subtitle')}
         </motion.p>
         
         <motion.p 
@@ -66,9 +68,7 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
         >
-          3年間のWEB開発経験＋2年間のフリーランス経験を持つフルスタック開発者。
-          Java/Spring Boot、TypeScript/Next.js、HeadlessCMSでの開発を得意とし、
-          要件定義から実装まで一貫して対応できます。
+          {t('hero.description')}
         </motion.p>
         
         <motion.div 
@@ -88,7 +88,7 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            About Me
+            {t('hero.aboutBtn')}
           </motion.a>
           <motion.a
             href="#contact"
@@ -103,7 +103,7 @@ export default function Hero() {
             whileTap={{ scale: 0.95 }}
             transition={{ type: "spring", stiffness: 300 }}
           >
-            Contact
+            {t('hero.contactBtn')}
           </motion.a>
         </motion.div>
       </motion.div>

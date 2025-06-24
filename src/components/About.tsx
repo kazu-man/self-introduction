@@ -3,8 +3,10 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function About() {
+  const { t } = useLanguage()
   const ref = useRef(null)
   const isInView = useInView(ref, { once: true, margin: "-100px" })
 
@@ -35,7 +37,7 @@ export default function About() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          About Me
+          {t('about.title')}
         </motion.h2>
         <div className="max-w-4xl mx-auto">
           <motion.div 
@@ -46,35 +48,31 @@ export default function About() {
           >
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-semibold mb-6 text-gray-800">
-                プロフィール
+                {t('about.profile')}
               </h3>
               <motion.p 
                 className="text-gray-600 mb-6 leading-relaxed"
                 variants={itemVariants}
               >
-                3年間WEB開発企業に従事した後、2022年末からフリーランスとして活動しています。
-                SpringBoot/jQuery・Next.js/HeadlessCMSでの基幹システム・Web開発、
-                AWSのインフラ構築補佐など幅広い開発経験を積んできました。
+                {t('about.profile1')}
               </motion.p>
               <motion.p 
                 className="text-gray-600 mb-6 leading-relaxed"
                 variants={itemVariants}
               >
-                バックエンド・フロントエンド関わらず新規プロジェクトの開発案件に携わり、
-                顧客との綿密なコミュニケーションを通じて要件定義から実装まで一貫して担当。
-                ユーザー視点のシステム開発を心がけています。
+                {t('about.profile2')}
               </motion.p>
             </motion.div>
             <motion.div variants={itemVariants}>
               <h3 className="text-2xl font-semibold mb-6 text-gray-800">
-                経験・実績
+                {t('about.experience')}
               </h3>
               <ul className="space-y-4">
                 {[
-                  { title: "フルスタック開発", desc: "Java/Spring Boot + Next.js/TypeScriptでの開発", color: "blue" },
-                  { title: "新規システム開発", desc: "要件定義〜実装まで一貫して担当", color: "blue" },
-                  { title: "HeadlessCMS活用", desc: "WordPress/Strapi等でのコンテンツ管理", color: "blue" },
-                  { title: "AWS認定資格", desc: "ソリューションアーキテクト取得済み", color: "green" }
+                  { titleKey: "about.exp1.title", descKey: "about.exp1.desc", color: "blue" },
+                  { titleKey: "about.exp2.title", descKey: "about.exp2.desc", color: "blue" },
+                  { titleKey: "about.exp3.title", descKey: "about.exp3.desc", color: "blue" },
+                  { titleKey: "about.exp4.title", descKey: "about.exp4.desc", color: "green" }
                 ].map((item, index) => (
                   <motion.li 
                     key={index}
@@ -92,9 +90,9 @@ export default function About() {
                     </motion.div>
                     <div>
                       <h4 className="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors">
-                        {item.title}
+                        {t(item.titleKey)}
                       </h4>
-                      <p className="text-gray-600">{item.desc}</p>
+                      <p className="text-gray-600">{t(item.descKey)}</p>
                     </div>
                   </motion.li>
                 ))}

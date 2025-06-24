@@ -3,54 +3,56 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Projects() {
+  const { t } = useLanguage()
   const projects = [
     {
-      title: "大学出願サイト",
-      description: "Next.js/Fastifyを使用した新規業務システム。顧客との綿密なコミュニケーションにより、具体的な要件定義から実装まで一貫して担当。",
+      titleKey: "projects.project1.title",
+      descriptionKey: "projects.project1.desc",
       technologies: ["TypeScript", "Next.js", "Fastify", "PostgreSQL", "Docker", "AWS"],
-      features: [
-        "API設計書作成",
-        "バックエンド・フロントエンド開発",
-        "顧客要件のシステム要件定義",
-        "Prisma ORM活用"
+      featureKeys: [
+        "projects.project1.feature1",
+        "projects.project1.feature2",
+        "projects.project1.feature3",
+        "projects.project1.feature4"
       ],
       year: "2024-2025"
     },
     {
-      title: "Webポータルサイト開発",
-      description: "Laravel/Next.jsを使用したWebポータルサイト。フロントエンド担当として、バックエンドチームと密に連携しながら開発を推進。",
+      titleKey: "projects.project2.title",
+      descriptionKey: "projects.project2.desc",
       technologies: ["TypeScript", "Next.js", "Laravel", "MySQL", "Docker"],
-      features: [
-        "フロントエンド新規開発",
-        "styled-components活用",
-        "Prisma ORM連携",
-        "バックエンド連携設計"
+      featureKeys: [
+        "projects.project2.feature1",
+        "projects.project2.feature2",
+        "projects.project2.feature3",
+        "projects.project2.feature4"
       ],
       year: "2023"
     },
     {
-      title: "IT商品ポータルサイト",
-      description: "Java/Next.jsで開発したWebアプリケーションの新規開発。Neo4JやOpenSearchなどの先進技術を活用したシステム構築。",
+      titleKey: "projects.project3.title",
+      descriptionKey: "projects.project3.desc",
       technologies: ["Java", "TypeScript", "Next.js", "Jersey", "PostgreSQL", "Neo4J"],
-      features: [
-        "新規サービス開発",
-        "Strapi HeadlessCMS連携",
-        "OpenSearch実装",
-        "TailwindCSS活用"
+      featureKeys: [
+        "projects.project3.feature1",
+        "projects.project3.feature2",
+        "projects.project3.feature3",
+        "projects.project3.feature4"
       ],
       year: "2022-2023"
     },
     {
-      title: "基幹システム保守・開発",
-      description: "Java/WordPress、Next.js/Strapiで構築された複雑な既存システムの保守・追加開発。10年以上の歴史を持つシステムの仕様解析から実装まで担当。",
+      titleKey: "projects.project4.title",
+      descriptionKey: "projects.project4.desc",
       technologies: ["Java", "Spring Boot", "Next.js", "WordPress", "Strapi", "MySQL"],
-      features: [
-        "既存システム仕様解析",
-        "詳細設計から開発",
-        "バッチ処理実装",
-        "HeadlessCMS活用"
+      featureKeys: [
+        "projects.project4.feature1",
+        "projects.project4.feature2",
+        "projects.project4.feature3",
+        "projects.project4.feature4"
       ],
       year: "2019-2022"
     }
@@ -86,7 +88,7 @@ export default function Projects() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          Projects
+          {t('projects.title')}
         </motion.h2>
         <motion.div 
           className="grid md:grid-cols-2 gap-8"
@@ -112,7 +114,7 @@ export default function Projects() {
                   transition={{ duration: 0.2 }}
                 >
                   <h3 className="text-xl font-semibold text-gray-800">
-                    {project.title}
+                    {t(project.titleKey)}
                   </h3>
                   <motion.span 
                     className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium"
@@ -123,11 +125,11 @@ export default function Projects() {
                   </motion.span>
                 </motion.div>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  {project.description}
+                  {t(project.descriptionKey)}
                 </p>
                 
                 <div className="mb-6">
-                  <h4 className="font-semibold text-gray-800 mb-3">Technologies Used:</h4>
+                  <h4 className="font-semibold text-gray-800 mb-3">{t('projects.techUsed')}:</h4>
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.map((tech, techIndex) => (
                       <motion.span 
@@ -147,9 +149,9 @@ export default function Projects() {
                 </div>
 
                 <div>
-                  <h4 className="font-semibold text-gray-800 mb-3">Key Features:</h4>
+                  <h4 className="font-semibold text-gray-800 mb-3">{t('projects.keyFeatures')}:</h4>
                   <ul className="space-y-2">
-                    {project.features.map((feature, featureIndex) => (
+                    {project.featureKeys.map((featureKey, featureIndex) => (
                       <motion.li 
                         key={featureIndex} 
                         className="flex items-center text-gray-600"
@@ -163,7 +165,7 @@ export default function Projects() {
                           whileHover={{ scale: 1.5, backgroundColor: "#1d4ed8" }}
                           transition={{ duration: 0.2 }}
                         ></motion.div>
-                        {feature}
+                        {t(featureKey)}
                       </motion.li>
                     ))}
                   </ul>
@@ -180,7 +182,7 @@ export default function Projects() {
           transition={{ duration: 0.6, delay: 1.0 }}
         >
           <p className="text-gray-600 mb-6">
-            これらのプロジェクトを通じて、スケーラブルで保守性の高いアプリケーション開発のスキルを磨いてきました。
+            {t('projects.description')}
           </p>
           <motion.div 
             className="bg-blue-50 border border-blue-200 rounded-lg p-6"
@@ -191,11 +193,10 @@ export default function Projects() {
             transition={{ duration: 0.2 }}
           >
             <h3 className="text-lg font-semibold text-blue-800 mb-2">
-              プロジェクトの詳細について
+              {t('projects.details.title')}
             </h3>
             <p className="text-blue-700">
-              各プロジェクトのソースコードや詳細な技術仕様については、
-              お気軽にお問い合わせください。守秘義務の範囲内で共有可能です。
+              {t('projects.details.desc')}
             </p>
           </motion.div>
         </motion.div>

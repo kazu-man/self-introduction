@@ -3,8 +3,10 @@
 import { motion } from 'framer-motion'
 import { useInView } from 'framer-motion'
 import { useRef } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Skills() {
+  const { t } = useLanguage()
   const skills = [
     {
       category: "Backend",
@@ -96,7 +98,7 @@ export default function Skills() {
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
           transition={{ duration: 0.6 }}
         >
-          Technical Skills
+          {t('skills.title')}
         </motion.h2>
         <motion.div 
           className="grid md:grid-cols-2 lg:grid-cols-4 gap-8"

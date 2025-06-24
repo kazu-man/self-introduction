@@ -66,9 +66,9 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1.0 }}
         >
-          5年間の実務経験を持つフルスタック開発者。Java、TypeScript、Next.js、Spring Bootを得意とし、
-          IELTS Overall 7.0のグローバルコミュニケーション能力を活かして、
-          国際的なプロジェクトでも活躍できます。
+          3年間のWEB開発経験＋2年間のフリーランス経験を持つフルスタック開発者。
+          Java/Spring Boot、TypeScript/Next.js、HeadlessCMSでの開発を得意とし、
+          要件定義から実装まで一貫して対応できます。
         </motion.p>
         
         <motion.div 

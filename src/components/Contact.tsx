@@ -143,8 +143,8 @@ export default function Contact() {
                 </svg>
               </motion.div>
               <div>
-                <h4 className="font-semibold">Languages</h4>
-                <p className="text-gray-300 text-sm">Japanese (Native), English (IELTS 7.0)</p>
+                <h4 className="font-semibold">Certifications</h4>
+                <p className="text-gray-300 text-sm">Japanese (Native), AWS認定SA</p>
               </div>
             </motion.div>
           </motion.div>

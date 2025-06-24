@@ -52,17 +52,17 @@ export default function About() {
                 className="text-gray-600 mb-6 leading-relaxed"
                 variants={itemVariants}
               >
-                5年間のソフトウェア開発経験を持つフリーランスエンジニアです。
-                バックエンドからフロントエンドまで幅広い技術スタックを扱い、
-                スケーラブルで保守性の高いアプリケーション開発を得意としています。
+                3年間WEB開発企業に従事した後、2022年末からフリーランスとして活動しています。
+                SpringBoot/jQuery・Next.js/HeadlessCMSでの基幹システム・Web開発、
+                AWSのインフラ構築補佐など幅広い開発経験を積んできました。
               </motion.p>
               <motion.p 
                 className="text-gray-600 mb-6 leading-relaxed"
                 variants={itemVariants}
               >
-                IELTS Overall 7.0のスコアを持ち、英語での技術文書作成や
-                海外チームとのコミュニケーションも可能です。
-                常に新しい技術にチャレンジし、効率的なソリューションを提供することを心がけています。
+                バックエンド・フロントエンド関わらず新規プロジェクトの開発案件に携わり、
+                顧客との綿密なコミュニケーションを通じて要件定義から実装まで一貫して担当。
+                ユーザー視点のシステム開発を心がけています。
               </motion.p>
             </motion.div>
             <motion.div variants={itemVariants}>
@@ -71,10 +71,10 @@ export default function About() {
               </h3>
               <ul className="space-y-4">
                 {[
-                  { title: "Java開発", desc: "3年間の企業向けシステム開発経験", color: "blue" },
-                  { title: "TypeScript & Next.js", desc: "3年間のモダンWeb開発経験", color: "blue" },
-                  { title: "Spring Boot", desc: "3年間のマイクロサービス開発経験", color: "blue" },
-                  { title: "IELTS Overall 7.0", desc: "国際的なコミュニケーション能力", color: "green" }
+                  { title: "フルスタック開発", desc: "Java/Spring Boot + Next.js/TypeScriptでの開発", color: "blue" },
+                  { title: "新規システム開発", desc: "要件定義〜実装まで一貫して担当", color: "blue" },
+                  { title: "HeadlessCMS活用", desc: "WordPress/Strapi等でのコンテンツ管理", color: "blue" },
+                  { title: "AWS認定資格", desc: "ソリューションアーキテクト取得済み", color: "green" }
                 ].map((item, index) => (
                   <motion.li 
                     key={index}

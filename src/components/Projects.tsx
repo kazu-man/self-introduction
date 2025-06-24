@@ -7,52 +7,52 @@ import { useRef } from 'react'
 export default function Projects() {
   const projects = [
     {
-      title: "E-commerce Platform",
-      description: "Spring BootとNext.jsを使用したフルスタックのECプラットフォーム。マイクロサービスアーキテクチャを採用し、高いスケーラビリティを実現。",
-      technologies: ["Java", "Spring Boot", "Next.js", "TypeScript", "PostgreSQL", "Redis"],
+      title: "大学出願サイト",
+      description: "Next.js/Fastifyを使用した新規業務システム。顧客との綿密なコミュニケーションにより、具体的な要件定義から実装まで一貫して担当。",
+      technologies: ["TypeScript", "Next.js", "Fastify", "PostgreSQL", "Docker", "AWS"],
       features: [
-        "RESTful API設計",
-        "JWT認証システム",
-        "リアルタイム在庫管理",
-        "決済システム統合"
+        "API設計書作成",
+        "バックエンド・フロントエンド開発",
+        "顧客要件のシステム要件定義",
+        "Prisma ORM活用"
       ],
-      year: "2024"
+      year: "2024-2025"
     },
     {
-      title: "Task Management System",
-      description: "チーム向けのタスク管理システム。リアルタイム更新とドラッグ&ドロップ機能を実装。",
-      technologies: ["TypeScript", "Next.js", "Spring Boot", "WebSocket", "MySQL"],
+      title: "Webポータルサイト開発",
+      description: "Laravel/Next.jsを使用したWebポータルサイト。フロントエンド担当として、バックエンドチームと密に連携しながら開発を推進。",
+      technologies: ["TypeScript", "Next.js", "Laravel", "MySQL", "Docker"],
       features: [
-        "リアルタイム同期",
-        "ドラッグ&ドロップUI",
-        "チーム管理機能",
-        "進捗レポート生成"
+        "フロントエンド新規開発",
+        "styled-components活用",
+        "Prisma ORM連携",
+        "バックエンド連携設計"
       ],
       year: "2023"
     },
     {
-      title: "API Gateway Service",
-      description: "マイクロサービス間の通信を管理するAPIゲートウェイ。レート制限、認証、ログ機能を実装。",
-      technologies: ["Java", "Spring Boot", "Spring Cloud Gateway", "Docker", "Kubernetes"],
+      title: "IT商品ポータルサイト",
+      description: "Java/Next.jsで開発したWebアプリケーションの新規開発。Neo4JやOpenSearchなどの先進技術を活用したシステム構築。",
+      technologies: ["Java", "TypeScript", "Next.js", "Jersey", "PostgreSQL", "Neo4J"],
       features: [
-        "レート制限",
-        "サービス発見",
-        "ヘルスチェック",
-        "分散トレーシング"
+        "新規サービス開発",
+        "Strapi HeadlessCMS連携",
+        "OpenSearch実装",
+        "TailwindCSS活用"
       ],
-      year: "2023"
+      year: "2022-2023"
     },
     {
-      title: "Real-time Analytics Dashboard",
-      description: "リアルタイムデータ可視化ダッシュボード。WebSocketを使用してライブデータを表示。",
-      technologies: ["TypeScript", "Next.js", "Chart.js", "WebSocket", "Redis"],
+      title: "基幹システム保守・開発",
+      description: "Java/WordPress、Next.js/Strapiで構築された複雑な既存システムの保守・追加開発。10年以上の歴史を持つシステムの仕様解析から実装まで担当。",
+      technologies: ["Java", "Spring Boot", "Next.js", "WordPress", "Strapi", "MySQL"],
       features: [
-        "リアルタイムチャート",
-        "カスタムダッシュボード",
-        "データエクスポート",
-        "アラート機能"
+        "既存システム仕様解析",
+        "詳細設計から開発",
+        "バッチ処理実装",
+        "HeadlessCMS活用"
       ],
-      year: "2022"
+      year: "2019-2022"
     }
   ]
 

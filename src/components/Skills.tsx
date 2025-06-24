@@ -11,36 +11,39 @@ export default function Skills() {
       technologies: [
         { name: "Java", level: "Expert", years: 3 },
         { name: "Spring Boot", level: "Expert", years: 3 },
-        { name: "Spring Framework", level: "Advanced", years: 3 },
-        { name: "REST API", level: "Expert", years: 5 },
-        { name: "Microservices", level: "Advanced", years: 2 }
+        { name: "Node.js", level: "Advanced", years: 1 },
+        { name: "Fastify", level: "Advanced", years: 1 },
+        { name: "Laravel", level: "Intermediate", years: 1 }
       ]
     },
     {
       category: "Frontend",
       technologies: [
         { name: "TypeScript", level: "Expert", years: 3 },
+        { name: "JavaScript", level: "Expert", years: 3 },
         { name: "Next.js", level: "Expert", years: 3 },
         { name: "React", level: "Expert", years: 3 },
-        { name: "Tailwind CSS", level: "Advanced", years: 2 },
-        { name: "HTML/CSS", level: "Expert", years: 5 }
+        { name: "jQuery", level: "Expert", years: 3 }
       ]
     },
     {
-      category: "Database & Tools",
+      category: "Database & Cloud",
       technologies: [
-        { name: "PostgreSQL", level: "Advanced", years: 3 },
-        { name: "MySQL", level: "Advanced", years: 3 },
-        { name: "Redis", level: "Intermediate", years: 2 },
+        { name: "MySQL", level: "Expert", years: 3 },
+        { name: "PostgreSQL", level: "Advanced", years: 2 },
+        { name: "AWS", level: "Advanced", years: 1 },
         { name: "Docker", level: "Advanced", years: 3 },
-        { name: "Git", level: "Expert", years: 5 }
+        { name: "Linux", level: "Expert", years: 3 }
       ]
     },
     {
-      category: "Language Skills",
+      category: "Others",
       technologies: [
-        { name: "Japanese", level: "Native", years: 0 },
-        { name: "English", level: "IELTS 7.0", years: 0 }
+        { name: "WordPress", level: "Advanced", years: 2 },
+        { name: "Strapi", level: "Advanced", years: 2 },
+        { name: "TailwindCSS", level: "Advanced", years: 2 },
+        { name: "Prisma", level: "Advanced", years: 1 },
+        { name: "PHP", level: "Intermediate", years: 2 }
       ]
     }
   ]
